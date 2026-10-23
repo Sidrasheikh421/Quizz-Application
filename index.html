@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Web Development Quiz</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+
+        <div class="logo">
+            <span>&lt;/&gt;</span>
+            Web Development <b>Quiz</b>
+        </div>
+
+        <nav>
+            <a href="#" onclick="goHome()">Home</a>
+            <a href="#quizzes">Quizzes</a>
+            <a href="#about">About</a>
+        </nav>
+
+    </header>
+
+
+    <!-- HOME PAGE -->
+    <section id="homePage">
+
+        <div class="hero">
+
+            <p class="small-title">TEST YOUR KNOWLEDGE</p>
+
+            <h1>Web Development Quiz</h1>
+
+            <p>
+                Improve your web development skills with
+                HTML, CSS and JavaScript quizzes.
+            </p>
+
+        </div>
+
+
+        <!-- Quiz Cards -->
+        <div class="quiz-container" id="quizzes">
+
+            <!-- HTML CARD -->
+            <div class="quiz-card html-card">
+
+                <div class="quiz-icon html-icon">
+                    <img src="./icons/html-5-svgrepo-com.svg" alt="HTML Icon" width="100" height="100">
+                </div>
+
+                <h2>HTML Quiz</h2>
+
+                <p>
+                    Test your knowledge of HTML
+                    with 10 questions.
+                </p>
+
+                <button
+                    class="quiz-button html-button"
+                    onclick="startQuiz('html')">
+
+                    Start HTML Quiz →
+
+                </button>
+
+            </div>
+
+
+            <!-- CSS CARD -->
+            <div class="quiz-card css-card">
+
+                <div class="quiz-icon css-icon">
+                    <img src="./icons/css-3-svgrepo-com.svg" alt="CSS Icon" width="100" height="100">
+                </div>
+
+                <h2>CSS Quiz</h2>
+
+                <p>
+                    Test your knowledge of CSS
+                    with 10 questions.
+                </p>
+
+                <button
+                    class="quiz-button css-button"
+                    onclick="startQuiz('css')">
+
+                    Start CSS Quiz →
+
+                </button>
+
+            </div>
+
+
+            <!-- JAVASCRIPT CARD -->
+            <div class="quiz-card js-card">
+
+                <div class="quiz-icon js-icon">
+                    <img src="./icons/javascript-svgrepo-com.svg" alt="JavaScript Icon" width="100" height="100">
+                </div>
+
+                <h2>JavaScript Quiz</h2>
+
+                <p>
+                    Test your knowledge of JavaScript
+                    with 10 questions.
+                </p>
+
+                <button
+                    class="quiz-button js-button"
+                    onclick="startQuiz('javascript')">
+
+                    Start JavaScript Quiz →
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- QUIZ PAGE -->
+    <section id="quizPage" class="quiz-page hidden">
+
+        <div class="quiz-box">
+
+            <div class="quiz-header">
+
+                <h2 id="quizTitle">
+                    HTML Quiz
+                </h2>
+
+                <span id="questionNumber">
+                    Question 1 of 10
+                </span>
+
+            </div>
+
+
+            <!-- Progress -->
+            <div class="progress-container">
+
+                <div
+                    id="progressBar"
+                    class="progress-bar">
+                </div>
+
+            </div>
+
+
+            <!-- Question -->
+            <h1 id="question">
+                Question
+            </h1>
+
+
+            <!-- Options -->
+            <div id="options"></div>
+
+
+            <!-- Buttons -->
+            <div class="quiz-buttons">
+
+                <button
+                    id="previousButton"
+                    class="previous-button"
+                    onclick="previousQuestion()">
+
+                    ← Previous
+
+                </button>
+
+
+                <button
+                    id="nextButton"
+                    class="next-button"
+                    onclick="nextQuestion()">
+
+                    Next →
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- RESULT PAGE -->
+    <section id="resultPage" class="result-page hidden">
+
+        <div class="result-box">
+
+            <h1 id="resultTitle">
+                Quiz Completed!
+            </h1>
+
+
+            <div class="score-circle">
+
+                <span id="scoreText">
+                    0/10
+                </span>
+
+                <small>Score</small>
+
+            </div>
+
+
+            <div class="result-details">
+
+                <div>
+                    <span>Total Questions</span>
+                    <strong id="totalQuestions">
+                        10
+                    </strong>
+                </div>
+
+                <div>
+                    <span>Your Score</span>
+                    <strong id="finalScore">
+                        0
+                    </strong>
+                </div>
+
+                <div>
+                    <span>Percentage</span>
+                    <strong id="percentage">
+                        0%
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <p id="resultMessage">
+                Good job!
+            </p>
+
+
+            <div class="result-buttons">
+
+                <button
+                    class="try-button"
+                    onclick="tryAgain()">
+
+                    Try Again
+
+                </button>
+
+
+                <button
+                    class="home-button"
+                    onclick="goHome()">
+
+                    Back to Home
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer id="about">
+
+        <p>
+            Web Development Quiz
+            | HTML | CSS | JavaScript
+        </p>
+
+    </footer>
+
+
+    <script src="app.js"></script>
+
+</body>
+</html>
+
+
+             
