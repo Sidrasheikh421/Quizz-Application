@@ -1,15 +1,12 @@
 // JAVASCRIPT
 
-
-
-
 //    QUIZ QUESTIONS
 
 
 const quizData = {
 
 
-    //    HTML QUESTIONS
+    //   HTML QUESTIONS
 
 
     html: [
