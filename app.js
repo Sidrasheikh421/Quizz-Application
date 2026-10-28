@@ -5,7 +5,6 @@
 
 const quizData = {
 
-
     //   HTML QUESTIONS
 
 
